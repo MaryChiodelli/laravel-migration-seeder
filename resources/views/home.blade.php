@@ -11,8 +11,9 @@
     <ul>
         @forelse ($trains as $train)
         <li>
-            <div>{{ $train->company }}</div>
-            <div>{{ $train->train_code }}</div>
+            <h3>Codice treno: {{ $train->train_code }}</h3>
+            <div>Partenza: {{ $train->departure_station }}, {{ $train->departure_time }}</div>
+            <div>Arrivo: {{ $train->arrival_station }}, {{ $train->arrival_time }}</div>
         </li>
         @empty
             <li>Nessun treno disponibile</li>
